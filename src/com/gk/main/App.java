@@ -1,12 +1,75 @@
 package com.gk.main;
 
-import java.util.Arrays;
+import java.io.File;
+import java.util.Scanner;
 
-public class App {
+public class App extends FileOps{
+	public static void fileOps() {
+		int opt, flag;
+		do {
+			flag = 0;
+			Scanner in = new Scanner(System.in);
+			System.out.println("\t Available File Operations");
+			System.out.println("1.Add File");
+			System.out.println("2.Delete File");
+			System.out.println("3.Search File");
+			System.out.println("0.Back to Main Menu");
+			opt = in.nextInt();
+			switch (opt) {
+			case 1:
+				addFile();
+				break;
+			case 2:
+				deleteFile();
+				break;
+			case 3:
+				searchFile();
+				break;
+			case 0:
+				MainMenu();
+				break;
+			default:
+				System.out.println("Invalid Input");
+				flag=1;			
+			}
+		} while(flag==1);
+
+	}
+	public static void MainMenu() {
+		int opt,flag;
+		do {
+		System.out.println("\t Virtual Key Repository");
+		System.out.println("\t Developed by Gopalakrishnan");
+		System.out.println("1.View Available Files");
+		System.out.println("2.File Operations");
+		System.out.println("0.Exit Application");
+		System.out.println("Enter the Valid Option[0-2]:");
+		Scanner in = new Scanner(System.in);
+		opt = in.nextInt();
+			flag=0;
+			switch (opt) {
+			case 1:
+				listFiles();
+				MainMenu();
+				break;
+			case 2:
+				fileOps();
+				break;
+			case 0:
+				System.out.println("Exiting Application....Goodbye!");
+				break;
+			default:
+				System.out.println("Wrong Input Try again.");
+				flag=1;
+				break;
+			}
+		} while (flag == 1);
+	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		 
+		// TODO Auto-generated method stub		
+		MainMenu();
+
 	}
 
 }

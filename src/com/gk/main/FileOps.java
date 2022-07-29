@@ -33,9 +33,11 @@ public class FileOps  {
 
 	}
 	public static void addFile() {
+		System.out.println("Add");
 		
 	}
 	public static void deleteFile() {
+		System.out.println("delete");
 		
 	} 
 	public static void searchFile() {
@@ -43,7 +45,20 @@ public class FileOps  {
 		String fName;
 		System.out.println("Enter the File name to be searched:");
 		fName=in.next();
-				
+		final String path = "C:\\Users\\USER\\Desktop\\Mphasis\\JAVA\\VirtualKeyRepository\\src\\DirectoryPool"+"\\"+fName;
+		File file=new File(path);
+		boolean present=file.exists();
+		if(present)
+		{
+			System.out.println("\t File: "+fName);
+			System.out.println("\t FILE FOUND\n");
+			
+		}
+		else if(!present)
+		{
+			System.out.println("\t File: "+fName);
+			System.out.println("\t FILE NOT FOUND..!\n");
+		}
 	}
 public static void main(String[] args)
 {

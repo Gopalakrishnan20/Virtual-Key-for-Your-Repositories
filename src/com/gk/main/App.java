@@ -9,20 +9,24 @@ public class App extends FileOps{
 			flag = 0;
 			Scanner in = new Scanner(System.in);
 			System.out.println("\t Available File Operations");
-			System.out.println("1.Add File");
-			System.out.println("2.Delete File");
-			System.out.println("3.Search File");
-			System.out.println("0.Back to Main Menu");
+			System.out.println("\t 1.Add File");
+			System.out.println("\t 2.Delete File");
+			System.out.println("\t 3.Search File");
+			System.out.println("\t 0.Back to Main Menu");
+			System.out.println("\t Enter the Option:");
 			opt = in.nextInt();
 			switch (opt) {
 			case 1:
 				addFile();
+				fileOps();
 				break;
 			case 2:
 				deleteFile();
+				fileOps();
 				break;
 			case 3:
 				searchFile();
+				fileOps();
 				break;
 			case 0:
 				MainMenu();

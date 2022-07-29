@@ -43,11 +43,11 @@ public class App extends FileOps{
 		int flag;
 		String opt;
 		do {
-		System.out.println("\t Virtual Key Repository");
+		System.out.println("\t\t\t Virtual Key Repository");
 		System.out.println("\\  / o ._ _|_      _. |   |/  _       |_)  _  ._   _   _ o _|_  _  ._  ");
 		System.out.println(" \\/  | |   |_ |_| (_| |   |\\ (/_ \\/   | \\ (/_ |_) (_) _> |  |_ (_) | \\/ ");
 		System.out.println("                                 /            |                      /  ");
-		System.out.println("\t Developed by Gopalakrishnan");
+		System.out.println("\t\t\tDeveloped by Gopalakrishnan");
 		System.out.println("1.View Available Files");
 		System.out.println("2.File Operations");
 		System.out.println("0.Exit Application");

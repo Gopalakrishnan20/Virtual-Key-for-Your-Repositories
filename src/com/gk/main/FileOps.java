@@ -1,6 +1,7 @@
 package com.gk.main;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 //import java.util.Collections;
@@ -32,31 +33,39 @@ public class FileOps {
 	}
 
 	public static void addFile() {
-		System.out.println("Add");
+		Scanner in = new Scanner(System.in);
+		System.out.println("Enter the File name:");
+		String fName = in.next();
+		final String path = "C:\\Users\\USER\\Desktop\\Mphasis\\JAVA\\VirtualKeyRepository\\src\\DirectoryPool" + "\\"
+				+ fName;
+		File file = new File(path);
+		try {
+			boolean created = file.createNewFile();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println("File:" + fName);
+		System.out.println("Created Successfully.");
 
 	}
 
 	public static void deleteFile() {
-		Scanner in=new Scanner(System.in);
-		String fName;
+		Scanner in = new Scanner(System.in);
 		System.out.println("Enter the File name to be deleted:");
-		fName=in.next();
-		final String path="C:\\Users\\USER\\Desktop\\Mphasis\\JAVA\\VirtualKeyRepository\\src\\DirectoryPool" + "\\"
+		String fName = in.next();
+		final String path = "C:\\Users\\USER\\Desktop\\Mphasis\\JAVA\\VirtualKeyRepository\\src\\DirectoryPool" + "\\"
 				+ fName;
-		File file=new File(path);
-		boolean present=file.isFile();
-		if(present)
-		{
+		File file = new File(path);
+		boolean present = file.isFile();
+		if (present) {
 			file.delete();
-			System.out.println("\t File: "+fName+" Deleted Sucessfully.");
+			System.out.println("\t File: " + fName + " Deleted Sucessfully.");
+		} else if (!present) {
+			System.out.println("\t File:" + fName + " NOT FOUND!\n");
+
 		}
-		else if(!present)
-		{
-			System.out.println("\t File:"+fName+" NOT FOUND!\n");
-			
-		}
-		
-		
+
 	}
 
 	public static void searchFile() {
@@ -76,9 +85,5 @@ public class FileOps {
 			System.out.println("\t File: " + fName);
 			System.out.println("\t FILE NOT FOUND..!\n");
 		}
-	}
-
-	public static void main(String[] args) {
-
 	}
 }

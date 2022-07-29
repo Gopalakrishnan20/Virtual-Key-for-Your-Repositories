@@ -38,7 +38,7 @@ public class App extends FileOps{
 		} while(flag==1);
 
 	}
-	public static void MainMenu() {
+	public static void MainMenu(){
 		int opt,flag;
 		do {
 		System.out.println("\t Virtual Key Repository");

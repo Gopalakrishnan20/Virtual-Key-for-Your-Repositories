@@ -45,8 +45,10 @@ public class FileOps {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		System.out.println("File:" + fName);
-		System.out.println("Created Successfully.");
+		System.out.println("\t________________________");
+		System.out.println("\t| File:" + fName+"\t\t |");
+		System.out.println("\t| Created Successfully.  | ");
+		System.out.println("\t|________________________|");
 
 	}
 

@@ -4,7 +4,8 @@ import java.util.Scanner;
 
 public class App extends FileOps{
 	public static void fileOps() {
-		int opt, flag;
+		int flag;
+		String opt;
 		do {
 			flag = 0;
 			Scanner in = new Scanner(System.in);
@@ -14,21 +15,21 @@ public class App extends FileOps{
 			System.out.println("\t 3.Search File");
 			System.out.println("\t 0.Back to Main Menu");
 			System.out.println("\t Enter the Option:");
-			opt = in.nextInt();
+			opt = in.next();
 			switch (opt) {
-			case 1:
+			case "1":
 				addFile();
 				fileOps();
 				break;
-			case 2:
+			case "2":
 				deleteFile();
 				fileOps();
 				break;
-			case 3:
+			case "3":
 				searchFile();
 				fileOps();
 				break;
-			case 0:
+			case "0":
 				MainMenu();
 				break;
 			default:
@@ -39,7 +40,8 @@ public class App extends FileOps{
 
 	}
 	public static void MainMenu(){
-		int opt,flag;
+		int flag;
+		String opt;
 		do {
 		System.out.println("\t Virtual Key Repository");
 		System.out.println("\\  / o ._ _|_      _. |   |/  _       |_)  _  ._   _   _ o _|_  _  ._  ");
@@ -51,17 +53,17 @@ public class App extends FileOps{
 		System.out.println("0.Exit Application");
 		System.out.println("Enter the Valid Option[0-2]:");
 		Scanner in = new Scanner(System.in);
-		opt = in.nextInt();
+		opt = in.next();
 			flag=0;
 			switch (opt) {
-			case 1:
+			case "1":
 				listFiles();
 				MainMenu();
 				break;
-			case 2:
+			case "2":
 				fileOps();
 				break;
-			case 0:
+			case "0":
 				System.out.println("Exiting Application....Goodbye!");
 				break;
 			default:

@@ -1,6 +1,5 @@
 package com.gk.main;
 
-import java.io.File;
 import java.util.Scanner;
 
 public class App extends FileOps{
@@ -39,6 +38,9 @@ public class App extends FileOps{
 		int opt,flag;
 		do {
 		System.out.println("\t Virtual Key Repository");
+		System.out.println("\\  / o ._ _|_      _. |   |/  _       |_)  _  ._   _   _ o _|_  _  ._  ");
+		System.out.println(" \\/  | |   |_ |_| (_| |   |\\ (/_ \\/   | \\ (/_ |_) (_) _> |  |_ (_) | \\/ ");
+		System.out.println("                                 /            |                      /  ");
 		System.out.println("\t Developed by Gopalakrishnan");
 		System.out.println("1.View Available Files");
 		System.out.println("2.File Operations");
